@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
-import Home from './pages/Home';
-import Usuarios from './pages/Usuarios';
-import Clientes from './pages/Clientes';
-import Financiamentos from './pages/Financiamentos';
+import Home from './pages/home/Home';
+import LisatagemUsuarios from './pages/usuarios/ListagemUsuarios';
+import ListagemClientes from './pages/clientes/ListagemClientes';
+import LisatagemFinanciamentos from './pages/financiamentos/ListagemFinanciamentos';
+import CadastroClientes from './pages/clientes/CadastroClientes';
 import './App.css';
 
 const App: React.FC = () => {
@@ -15,9 +16,11 @@ const App: React.FC = () => {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/usuarios" element={<Usuarios />} />
-            <Route path="/clientes" element={<Clientes />} />
-            <Route path="/financiamentos" element={<Financiamentos />} />
+            <Route path="/usuarios" element={<LisatagemUsuarios />} />
+            <Route path="/clientes" element={<ListagemClientes />} />
+            <Route path="/financiamentos" element={<LisatagemFinanciamentos />} />
+            <Route path="/clientes/cadastro" element={<CadastroClientes />} />
+
           </Routes>
         </div>
       </div>
