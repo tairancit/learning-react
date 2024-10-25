@@ -44,7 +44,7 @@ const ListagemClientes: React.FC = () => {
 
   const fecharModal = () => {
     setIsModalOpen(false);
-    setClienteIdParaExcluir(null); // Limpa o ID do cliente
+    setClienteIdParaExcluir(null);
   };
 
   return (
