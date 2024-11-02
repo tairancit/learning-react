@@ -4,7 +4,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #2434e3;
+    background-color: #02030e;
     padding-top: 20px;
     overflow-x: hidden;
   }
@@ -32,6 +32,6 @@
   }
   
   .sidebar ul li a:hover {
-    background-color: #90c9e6;
+    background-color: #1c6b93;
     color: #fff;
   }

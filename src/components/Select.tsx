@@ -1,4 +1,6 @@
 import React from 'react';
+import SelectJoy from '@mui/joy/Select';
+import Option from '@mui/joy/Option';
 
 interface SelectProps {
   id: string;
@@ -11,14 +13,20 @@ interface SelectProps {
 const Select: React.FC<SelectProps> = ({ id, label, options, value, onChange }) => {
   return (
     <div>
-      <label htmlFor={id}>{label}</label>
-      <select id={id} value={value} onChange={(e) => onChange(e.target.value)}>
+      <label htmlFor={id} style={{ marginBottom: '8px', display: 'block' }}>{label}</label>
+      <SelectJoy
+        id={id}
+        placeholder="Selecione uma opção"
+        value={value}
+        onChange={(event, newValue) => onChange(newValue || '')}
+        sx={{ minWidth: 240 }}
+      >
         {options.map(option => (
-          <option key={option.value} value={option.value}>
+          <Option key={option.value} value={option.value}>
             {option.label}
-          </option>
+          </Option>
         ))}
-      </select>
+      </SelectJoy>
     </div>
   );
 };
