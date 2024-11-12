@@ -7,10 +7,11 @@ interface SelectProps {
   label: string;
   options: { value: string; label: string }[];
   value: string;
+  width: number;
   onChange: (value: string) => void;
 }
 
-const Select: React.FC<SelectProps> = ({ id, label, options, value, onChange }) => {
+const Select: React.FC<SelectProps> = ({ id, label, options, value, width, onChange }) => {
   return (
     <div>
       <label htmlFor={id} style={{ marginBottom: '8px', display: 'block' }}>{label}</label>
@@ -19,7 +20,7 @@ const Select: React.FC<SelectProps> = ({ id, label, options, value, onChange }) 
         placeholder="Selecione uma opção"
         value={value}
         onChange={(event, newValue) => onChange(newValue || '')}
-        sx={{ minWidth: 240 }}
+        sx={{ minWidth: { width } }}
       >
         {options.map(option => (
           <Option key={option.value} value={option.value}>
