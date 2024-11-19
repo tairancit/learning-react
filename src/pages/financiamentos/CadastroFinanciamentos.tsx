@@ -246,7 +246,7 @@ const CadastroFinanciamentos: React.FC = () => {
                   </tr>
                 ))}
               </tbody>
-              </Table>
+            </Table>
               <Button style={{ marginTop: '20px' }}>Confirmar</Button>
               <Button sx={{ 
                 backgroundColor: 'white', 

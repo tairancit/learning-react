@@ -9,6 +9,7 @@ import CadastroClientes from './pages/clientes/CadastroClientes';
 import LisatagemFinanciamentos from './pages/financiamentos/ListagemFinanciamentos';
 import CadastroFinanciamentos from './pages/financiamentos/CadastroFinanciamentos';
 import './App.css';
+import FinanciamentoVisualizacao from './pages/financiamentos/FinanciamentoVisualizacao';
 
 const App: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ const App: React.FC = () => {
             <Route path="/clientes/cadastro" element={<CadastroClientes />} />
             <Route path="/financiamentos" element={<LisatagemFinanciamentos />} />
             <Route path="/financiamentos/cadastro" element={<CadastroFinanciamentos />} />
+            <Route path="/financiamentos/visualizacao" element={<FinanciamentoVisualizacao />} />
 
           </Routes>
         </div>

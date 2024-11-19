@@ -73,7 +73,7 @@ const ListagemClientes: React.FC = () => {
               <td>
                 <IconButton variant="plain" onClick={() => abrirModal(cliente.id)}><DeleteIcon /></IconButton>
                 <IconButton variant="plain" onClick={navigateCadastro}><EditIcon /></IconButton>
-                </td>
+              </td>
             </tr>
           ))}
         </tbody>
