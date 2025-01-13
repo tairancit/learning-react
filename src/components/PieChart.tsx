@@ -17,7 +17,7 @@ ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale, LinearScale)
 const PieChart = () => {
   // Dados do gráfico
   const data = {
-    labels: ['Categoria A', 'Categoria B', 'Categoria C'],
+    labels: ['Vencidas', 'Pagas', 'A vencer'],
     datasets: [
       {
         data: [30, 40, 30], // Porcentagens de cada categoria
@@ -40,7 +40,7 @@ const PieChart = () => {
   return (
     <Card>
       <CardContent>
-        <Typography variant="h6">Gráfico de Pizza</Typography>
+        <Typography variant="h6">Parcelas do mês atual</Typography>
         <Pie data={data} options={options} />
       </CardContent>
     </Card>

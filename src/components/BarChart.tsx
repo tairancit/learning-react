@@ -25,7 +25,7 @@ const BarChart = () => {
         backgroundColor: 'rgba(75, 192, 192, 0.2)', // Cor das barras
         borderColor: 'rgba(75, 192, 192, 1)', // Cor da borda das barras
         borderWidth: 1, // Espessura da borda das barras
-      },
+      }
     ],
   };
 

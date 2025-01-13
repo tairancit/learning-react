@@ -10,24 +10,30 @@ import FinanciamentosListagem from './pages/financiamentos/FinanciamentosListage
 import FinanciamentosCadastro from './pages/financiamentos/FinanciamentosCadastro';
 import './App.css';
 import FinanciamentosVisualizacao from './pages/financiamentos/FinanciamentosVisualizacao';
+import TopBar from './components/TopBar';
 
 const App: React.FC = () => {
   return (
     <Router>
       <div className="App">
-        <Sidebar />
-        <div className="content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/usuarios" element={<UsuariosListagem />} />
-            <Route path="/usuarios/cadastro" element={<UsuariosCadastro />} />
-            <Route path="/clientes" element={<ClientesListagem />} />
-            <Route path="/clientes/cadastro" element={<ClientesCadastro />} />
-            <Route path="/financiamentos" element={<FinanciamentosListagem />} />
-            <Route path="/financiamentos/cadastro" element={<FinanciamentosCadastro />} />
-            <Route path="/financiamentos/visualizacao" element={<FinanciamentosVisualizacao />} />
-
-          </Routes>
+        {/* Adiciona a TopBar */}
+        <TopBar />
+        <div style={{ display: 'flex' }}>
+          {/* Sidebar */}
+          <Sidebar />
+          {/* Conteúdo Principal */}
+          <div className="content" style={{ flex: 1, padding: '16px' }}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/usuarios" element={<UsuariosListagem />} />
+              <Route path="/usuarios/cadastro" element={<UsuariosCadastro />} />
+              <Route path="/clientes" element={<ClientesListagem />} />
+              <Route path="/clientes/cadastro" element={<ClientesCadastro />} />
+              <Route path="/financiamentos" element={<FinanciamentosListagem />} />
+              <Route path="/financiamentos/cadastro" element={<FinanciamentosCadastro />} />
+              <Route path="/financiamentos/visualizacao" element={<FinanciamentosVisualizacao />} />
+            </Routes>
+          </div>
         </div>
       </div>
     </Router>
