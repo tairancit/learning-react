@@ -6,9 +6,9 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 
-const TopBar = () => {
+const Topbar: React.FC = () => {
   return (
-    <AppBar position="static">
+    <AppBar position="fixed" sx={{ backgroundColor: '#02030e' }}>
       <Toolbar>
         {/* Ícone do menu */}
         <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
@@ -17,7 +17,7 @@ const TopBar = () => {
 
         {/* Título */}
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Minha Aplicação
+          Contabilidade
         </Typography>
 
         {/* Ícone de usuário */}
@@ -29,4 +29,4 @@ const TopBar = () => {
   );
 };
 
-export default TopBar;
+export default Topbar;

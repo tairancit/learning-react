@@ -6,6 +6,7 @@
   margin-left: 250px; /* Deixar espaço para o menu lateral */
   padding: 20px;
   flex: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+  margin-top: 64px;
 }
 
 h1 {

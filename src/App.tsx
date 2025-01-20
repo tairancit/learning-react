@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
+import Topbar from './components/Topbar';
 import Home from './pages/home/Home';
 import UsuariosListagem from './pages/usuarios/UsuariosListagem';
 import UsuariosCadastro from './pages/usuarios/UsuariosCadastro';
@@ -10,14 +11,13 @@ import FinanciamentosListagem from './pages/financiamentos/FinanciamentosListage
 import FinanciamentosCadastro from './pages/financiamentos/FinanciamentosCadastro';
 import './App.css';
 import FinanciamentosVisualizacao from './pages/financiamentos/FinanciamentosVisualizacao';
-import TopBar from './components/TopBar';
 
 const App: React.FC = () => {
   return (
     <Router>
       <div className="App">
+        <Topbar />
         {/* Adiciona a TopBar */}
-        <TopBar />
         <div style={{ display: 'flex' }}>
           {/* Sidebar */}
           <Sidebar />
